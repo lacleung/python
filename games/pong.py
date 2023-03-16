@@ -135,12 +135,12 @@ while True:
             ball.sety(ball.ycor()//abs(ball.ycor()) * 290)
             ball.dy *= -1
 
-        if (340 <= ball.xcor() <= 350) and ((paddle_b.ycor() - 45) < ball.ycor() < (paddle_b.ycor() + 45)):
-            ball.setx(340)
+        if (330 <= ball.xcor() <= 350) and ((paddle_b.ycor() - 50) < ball.ycor() < (paddle_b.ycor() + 50)):
+            ball.setx(330)
             ball.dx *= -1
 
-        if (-350 <= ball.xcor() <= -340) and ((paddle_a.ycor() - 45) < ball.ycor() < (paddle_a.ycor() + 45)): 
-            ball.setx(-340)
+        if (-350 <= ball.xcor() <= -330) and ((paddle_a.ycor() - 50) < ball.ycor() < (paddle_a.ycor() + 50)): 
+            ball.setx(-330)
             ball.dx *= -1
 
         if abs(ball.xcor()) > 390:
