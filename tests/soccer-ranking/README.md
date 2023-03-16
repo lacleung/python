@@ -1,4 +1,10 @@
-# Instructions to Run Code
+# Test Prompt
+
+ This was written as a coding challenge for LeapYear Technologies and the challenge can be found [here](https://leapyear.github.io/soccer-ranking-project/). This code was written with only a basic understanding of python.
+
+---
+
+## Instructions to Run Code
 - Install python 3 
   - With apt 
   ``` bash
@@ -15,7 +21,9 @@
 - You will be prompted to input the path of the input text file (included in email)
 - An output will be printed to the console
 
-# Areas of Improvement and Additional Info
+---
+
+## Areas of Improvement and Additional Info
 - I took the full 2 hours to do this challenge (+ a bit more for personal research)
 - Add more detailed comments
 - Create input data validation steps 
