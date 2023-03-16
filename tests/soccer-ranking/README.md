@@ -33,4 +33,4 @@
   - I created manual tests with various odd inputs while coding and other input.txt files (e.g. Names with more words/symbols, scores with more digits etc.)
 - Find faster ways to sort scoreboard
 - Write a more detailed readme/instructions and condense the necessary dependecies to run the script
-- Learn a python more! 
+- Learn python more! 
