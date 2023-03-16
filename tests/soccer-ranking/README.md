@@ -1,4 +1,4 @@
-# Test Prompt
+# Soccer Ranking Challenge
 
  This was written as a coding challenge for LeapYear Technologies and the challenge can be found [here](https://leapyear.github.io/soccer-ranking-project/). This code was written with only a basic understanding of python.
 
