@@ -47,7 +47,7 @@ class score(turtle.Turtle):
 
     def updateScore(self, score_a, score_b):
         self.clear()
-        self.write("Player A: {} Player B: {}".format(score_a, score_b), align="center", font=("Arial", 24, "normal"))
+        self.write("Player A: {} Player B: {}".format(score_a, score_b), align="center", font=("Courier New", 24, "bold"))
 
 # Movement functions (no arguments allowed)
 def paddle_a_up():
@@ -88,13 +88,13 @@ turtle.colormode(255)
 # Window settings
 wn = turtle.Screen()
 wn.title("Pong!")
-wn.bgcolor("black")
+wn.bgcolor("#000000")
 wn.setup(width=800, height=600)
 wn.tracer(0)
 
 # Paddle settings
-paddle_a = paddle(5,1,"orange",-350,0)
-paddle_b = paddle(5,1,"blue",350,0)
+paddle_a = paddle(5,1,"#f5b942",-350,0)
+paddle_b = paddle(5,1,"#4287f5",350,0)
 
 # Ball settings
 ballnum = turtle.textinput("Difficulty Level", "Number of Balls:")
