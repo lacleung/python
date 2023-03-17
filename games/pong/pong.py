@@ -1,7 +1,7 @@
 import turtle
 import random 
 
-class paddle(turtle.Turtle):
+class Paddle(turtle.Turtle):
 
     def __init__(self, width, length, color, posx, posy):
         super().__init__()
@@ -12,7 +12,7 @@ class paddle(turtle.Turtle):
         self.penup()
         self.goto(posx, posy)
 
-class ball(turtle.Turtle):
+class Ball(turtle.Turtle):
 
     def __init__(self, color, pos, dx, dy):
         super().__init__()
@@ -33,7 +33,7 @@ class ball(turtle.Turtle):
             self.sety(self.xcor()//abs(self.xcor()) * 390)
             ball.dx *= -1
 
-class score(turtle.Turtle):
+class Score(turtle.Turtle):
 
     def __init__(self, color):
         super().__init__()
@@ -43,7 +43,7 @@ class score(turtle.Turtle):
         self.hideturtle()
         self.goto(0,260)
 
-    def updateScore(self, score_a, score_b):
+    def update_score(self, score_a, score_b):
         self.clear()
         self.write("Player A: {} Player B: {}".format(score_a, score_b), align="center", font=("Courier New", 24, "bold"))
 
@@ -91,14 +91,14 @@ wn.setup(width=800, height=600)
 wn.tracer(0)
 
 # Paddle settings
-paddle_a = paddle(5,1,"#f5b942",-350,0)
-paddle_b = paddle(5,1,"#4287f5",350,0)
+paddle_a = Paddle(5,1,"#f5b942",-350,0)
+paddle_b = Paddle(5,1,"#4287f5",350,0)
 
 # Ball settings
 ballnum = turtle.textinput("Difficulty Level", "Number of Balls:")
 balls = []
 for i in range(int(ballnum)):
-    balls.append(ball((random.randint(0, 255),
+    balls.append(Ball((random.randint(0, 255),
                        random.randint(0, 255),
                        random.randint(0, 255)),
                        (0, 0),
@@ -113,14 +113,14 @@ wn.onkeypress(paddle_b_up, "Up")
 wn.onkeypress(paddle_b_down, "Down")
 
 # Initialize score
-score = score("#FFFFFF")
+score = Score("#FFFFFF")
 score_a = 0
 score_b = 0
 
 # Main game loop
 while True:
     wn.update()
-    score.updateScore(score_a, score_b)
+    score.update_score(score_a, score_b)
 
     for ball in balls:
         # Move the balls
@@ -147,7 +147,7 @@ while True:
             else:
                 score_b += 1
             
-            score.updateScore(score_a, score_b)
+            score.update_score(score_a, score_b)
             ball.goto(0,0)
             ball.dy = random.randrange(1, 5) * random.randrange(-1, 2, 2)
             ball.dx = random.randrange(1, 5) * ball.dx//abs(ball.dx) * -1
